@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7ff">
+  <title>Create your account</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #17213b;
+      background: #f4f7ff;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      background:
+        radial-gradient(ellipse at 10% 10%, rgba(195, 211, 255, .6), transparent 38%),
+        radial-gradient(ellipse at 90% 90%, rgba(221, 207, 255, .55), transparent 35%),
+        #f4f7ff;
+    }
+
+    .signup-card {
+      width: min(100%, 480px);
+      padding: 42px;
+      border: 1px solid rgba(255, 255, 255, .85);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 24px 70px rgba(47, 65, 117, .13);
+    }
+
+    .brand {
+      display: inline-grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      background: #6254e8;
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(98, 84, 232, .25);
+    }
+
+    h1 {
+      margin: 0;
+      color: #17213b;
+      font-size: clamp(1.8rem, 5vw, 2.25rem);
+      letter-spacing: -.045em;
+    }
+
+    .intro {
+      margin: 10px 0 28px;
+      color: #68738d;
+      font-size: .98rem;
+      line-height: 1.6;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    label {
+      color: #313d59;
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    input {
+      width: 100%;
+      min-height: 49px;
+      padding: 0 14px;
+      border: 1px solid #dce2ef;
+      border-radius: 11px;
+      outline: none;
+      background: #fff;
+      color: #17213b;
+      font: inherit;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    input::placeholder { color: #a0a9bb; }
+
+    input:focus {
+      border-color: #7568ed;
+      box-shadow: 0 0 0 4px rgba(117, 104, 237, .13);
+    }
+
+    .terms {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 5px 0 22px;
+      color: #68738d;
+      font-size: .84rem;
+      line-height: 1.5;
+    }
+
+    .terms input {
+      width: 17px;
+      min-height: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+      margin: 2px 0 0;
+      accent-color: #6254e8;
+    }
+
+    a { color: #5a4dde; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    button {
+      width: 100%;
+      min-height: 51px;
+      border: 0;
+      border-radius: 11px;
+      background: #6254e8;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      box-shadow: 0 9px 20px rgba(98, 84, 232, .22);
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    button:hover { background: #5143d5; transform: translateY(-1px); }
+    button:focus-visible { outline: 3px solid #aaa2ff; outline-offset: 3px; }
+
+    .signin {
+      margin: 22px 0 0;
+      color: #68738d;
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .signup-card { padding: 32px 24px; border-radius: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="signup-card">
+    <div class="brand" aria-hidden="true">A</div>
+    <h1>Create your account</h1>
+    <p class="intro">Join us today. It only takes a minute to get started.</p>
+
+    <form action="#" method="post">
+      <div class="field">
+        <label for="full-name">Full name</label>
+        <input id="full-name" name="full-name" type="text" autocomplete="name" placeholder="Jordan Lee" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required>
+      </div>
+
+      <label class="terms">
+        <input name="terms" type="checkbox" required>
+        <span>I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>.</span>
+      </label>
+
+      <button type="submit">Create account</button>
+    </form>
+
+    <p class="signin">Already have an account? <a href="#sign-in">Sign in</a></p>
+  </main>
+</body>
+</html>
